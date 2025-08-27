@@ -34,7 +34,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     setTimeout(() => {
       successPopup.classList.add("d-none");
-      window.location.href = "gallery.html";
+      window.location.href = "homepage.html";
     }, 1000);
 
   } else {
