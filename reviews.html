@@ -13,7 +13,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="review.css">
+    <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
@@ -94,11 +94,11 @@
             <!--Page Header-->
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-center mb-4 fw-bold">
+                    <h1 class="text-center mb-4 review-title">
                         Customer Reviews
                     </h1>
                     <p class="text-center review-subtitle mb-5">
-                        See the opinions and experience of others.
+                        See the opions and experience of others.
                     </p>
                 </div>
             </div>
@@ -141,11 +141,11 @@
                                 </div>
                                 <div class="col-md-3 col-6">
                                     <div class="stat-item">
-                                        <h3 class="stat-number text-info">
-                                            24
+                                        <h3 id="foodCount" class="stat-number text-info">
+                                            0
                                         </h3>
                                         <p class="stat-label">
-                                            Featured Foods
+                                            Food Types Reviewed
                                         </p>
                                     </div>
                                 </div>
@@ -240,7 +240,7 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <select class="form-select" id="filterByFood" onchange="filterReviews()">
-                        <!--Add if the foodlist updated-->
+                        <!--Manual add if the foodlist updated-->
                         <option value="all">All Foods</option>
                         <option value="Nasi Lemak">Nasi Lemak</option>
                         <option value="Char Kuey Teow">Char Kuey Teow</option>
@@ -267,7 +267,7 @@
             <div class="row" id="reviewsList"></div>
 
             <!--Load More Button(Hidden first)-->
-            <div class="row" id="'LoadMoreContainer" style="display: none;">
+            <div class="row" id="LoadMoreContainer" style="display: none;">
                 <div class="col-12 text-center">
                     <button class="btn btn-outline-primary btn-lg" onclick="loadMoreReviews()">
                         <i class="bi bi-arrow-down-circle"></i> Load More Reviews
@@ -277,79 +277,80 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5 mt-5">
-        <div class="container">
-            <div class="row">
-                <!-- Company Info -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="mb-3">Malaysia Gourmet</h5>
-                    <p class="mb-3">Discover the authentic flavors of Malaysian cuisine through our carefully curated gallery and content.</p>
-                    <p class="small text-muted mb-0">Made with ❤️ in Malaysia</p>
-                </div>
-                <!-- Quick Links -->
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="mb-3">Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="homepage.html" class="text-light text-decoration-none">Home</a></li>
-                        <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
-                        <li><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
-                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- More Links -->
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h6 class="mb-3">Explore</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="foodlist.html" class="text-light text-decoration-none">Food List</a></li>
-                        <li><a href="reviews.html" class="text-light text-decoration-none">Reviews</a></li>
-                        <li><a href="explore.html" class="text-light text-decoration-none">Explore</a></li>
-                        <li><a href="login.html" class="text-light text-decoration-none">Login</a></li>
-                    </ul>
-                </div>
-                <!-- Social Media & Contact -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h6 class="mb-3">Connect With Us</h6>
-                    <div class="d-flex gap-3 mb-3">
-                        <a href="https://facebook.com/malaysiagourmet" target="_blank" class="text-light">
-                            <i class="bi bi-facebook fs-5"></i>
-                        </a>
-                        <a href="https://instagram.com/malaysiagourmet" target="_blank" class="text-light">
-                            <i class="bi bi-instagram fs-5"></i>
-                        </a>
-                        <a href="https://twitter.com/malaysiagourmet" target="_blank" class="text-light">
-                            <i class="bi bi-twitter fs-5"></i>
-                        </a>
-                        <a href="https://youtube.com/malaysiagourmet" target="_blank" class="text-light">
-                            <i class="bi bi-youtube fs-5"></i>
-                        </a>
-                    </div>
-                    <p class="small text-muted mb-2">📧 info@malaysiagourmet.com</p>
-                    <p class="small text-muted mb-0">📞 +60 3-1234 5678</p>
-                </div>
-            </div>
-            <!-- Copyright and Legal Notice -->
-            <hr class="my-4 border-secondary">
-            <div class="row">
-                <div class="col-md-8">
-                    <p class="small text-muted mb-2">
-                        <strong>Image Copyright Notice:</strong> All images displayed on this website are subject to their respective copyright holders. 
-                        <br>Images are used for educational and demonstration purposes only.
-                    </p>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <p class="small text-muted mb-0">Made with ❤️ in Malaysia</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="main.js"></script>
-    <script src="review.js"></script>
+    <script src="reviews.js"></script>
+
+    <!-- Footer -->
+  <footer class="bg-dark text-white py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- Company Info -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5 class="mb-3">Malaysia Gourmet</h5>
+          <p class="mb-3">Discover the authentic flavors of Malaysian cuisine through our carefully curated gallery and
+            content.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+            <li><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
+            <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <!-- More Links -->
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6 class="mb-3">Explore</h6>
+          <ul class="list-unstyled">
+            <li><a href="foodlist.html" class="text-light text-decoration-none">Food List</a></li>
+            <li><a href="reviews.html" class="text-light text-decoration-none">Reviews</a></li>
+            <li><a href="explore.html" class="text-light text-decoration-none">Explore</a></li>
+            <li><a href="login.html" class="text-light text-decoration-none">Login</a></li>
+          </ul>
+        </div>
+        <!-- Social Media & Contact -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h6 class="mb-3">Connect With Us</h6>
+          <div class="d-flex gap-3 mb-3">
+            <a href="https://facebook.com/malaysiagourmet" target="_blank" class="text-light">
+              <i class="bi bi-facebook fs-5"></i>
+            </a>
+            <a href="https://instagram.com/malaysiagourmet" target="_blank" class="text-light">
+              <i class="bi bi-instagram fs-5"></i>
+            </a>
+            <a href="https://twitter.com/malaysiagourmet" target="_blank" class="text-light">
+              <i class="bi bi-twitter fs-5"></i>
+            </a>
+            <a href="https://youtube.com/malaysiagourmet" target="_blank" class="text-light">
+              <i class="bi bi-youtube fs-5"></i>
+            </a>
+          </div>
+          <p class="small text-muted mb-2">📧 info@malaysiagourmet.com</p>
+          <p class="small text-muted mb-0">📞 +60 3-1234 5678</p>
+        </div>
+      </div>
+      <!-- Copyright and Legal Notice -->
+      <hr class="my-4 border-secondary">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="small text-muted mb-2">
+            <strong>Image Copyright Notice:</strong> All images displayed on this website are subject to their respective
+            copyright holders.
+            <br>Images are used for educational and demonstration purposes only.
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <p class="small text-muted mb-0">Made with ❤️ in Malaysia</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

@@ -261,6 +261,7 @@ function searchReviews() {
     displayFilteredReviews();
 }
 
+
 // Filter reviews
 function filterReviews() {
     searchReviews();
@@ -356,7 +357,7 @@ function showMessage(message, type = 'success') {
     }
 }
 
-// Save reviews to localStorage
+// Save reviews to local storage
 function saveReviews() {
     try {
         const reviewsData = reviews.map(r => ({
@@ -370,15 +371,3 @@ function saveReviews() {
     }
 }
 
-// Get review statistics
-function getReviewStatistics() {
-    const stats = { total: reviews.length, avgRating: 0, byFood: {}, byRating: { 1:0,2:0,3:0,4:0,5:0 }, totalLikes: 0 };
-    if (reviews.length > 0) stats.avgRating = (reviews.reduce((sum,r)=>sum+r.rating,0)/reviews.length).toFixed(1);
-    reviews.forEach(r => { stats.byFood[r.food] = (stats.byFood[r.food]||0)+1; stats.byRating[r.rating]++; stats.totalLikes += r.likes; });
-    return stats;
-}
-
-// Export reviews data
-function exportReviews() {
-    return { reviews, exportDate: new Date().toISOString(), totalCount: reviews.length, statistics: getReviewStatistics() };
-}

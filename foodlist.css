@@ -30,6 +30,9 @@
     box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
 }
 
+.search-icon {
+    color: #6c757d;
+}
 
 /* Category filter styling */
 #categoryFilter {
@@ -162,7 +165,24 @@
     border-left-color: #17a2b8;
 }
 
+.favorite-item {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    font-size: 0.9rem;
+    color: #495057;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
+.favorite-item:hover {
+    background-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
 
 /* Animation for filtered items */
 .fade-in {
