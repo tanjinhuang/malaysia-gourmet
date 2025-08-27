@@ -1,0 +1,123 @@
+/* =========================
+   General Page Styles
+========================= */
+body {
+    background: linear-gradient(135deg, #f9fafb, #eef2f7);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container spacing */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* =========================
+   Food Image
+========================= */
+.food-img {
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   Section Titles
+========================= */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* =========================
+   Food Title Gradient
+========================= */
+#food-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #ff512f, #dd2476); /* gradient */
+  background-clip: text;            /* standard */
+  -webkit-background-clip: text;    /* for Chrome, Safari, Edge */
+  color: transparent;               /* text takes gradient */
+}
+
+/* =========================
+   Card Layout
+========================= */
+.card {
+    border-radius: 15px;
+    background: #fff;
+    border: none;
+    margin-bottom: 30px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+   List Styles
+========================= */
+.list-group {
+    margin-top: 10px;
+}
+
+/* Ordered steps */
+.list-group-numbered li {
+    padding-left: 8px;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+    border: 2px solid #3498db;
+    color: #3498db;
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .food-img {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,28 @@
+/* Logout Card */
+.logout-card {
+  max-width: 500px;   /* slightly bigger than login */
+  width: 95%;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+}
+
+/* Logout Message */
+.logout-card p {
+  font-size: 1.3rem;   /* bigger message font */
+  color: #333;
+}
+
+/* Logout Button */
+.logout-card .btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  font-size: 1.1rem;   /* bigger button font */
+  font-weight: bold;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.logout-card .btn-primary:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}

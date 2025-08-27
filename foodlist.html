@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Gourmet: Food List</title>
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="foodlist.css">
+
+</head>
+
+
+<body>
+    <header>
+        <div class="container">
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                &#9776;
+            </button>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="foodlist.html" class="active">FoodList</a>
+                    </li>
+                    <li>
+                        <a href="reviews.html">Review</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="explore.html">Explore</a>
+                    </li>
+                    <li>
+                        <a href="Login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header-content">
+                    <a href="index.html" class="logo">Malaysia Gourmet</a>
+            </div>
+
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="foodlist.html" class="active">FoodList</a>
+                </li>
+                <li>
+                    <a href="reviews.html">Reviews</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="explore.html">Explore</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container my-5">
+            <!--Page header-->
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center mb-4 page-title">
+                        Malaysian Street Food
+                    </h1>
+                    <p class="text-center page-subtitile mb-5">
+                        Recommedation of Malaysia most popular street food with price and states.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!--Search and filter bar-->
+        <div class="row mb-4">
+            <div class="col-mb-6 mb-3">
+                <div class="search-container position-relative">
+                    <input type="text" class="form-control pe-5" id="searchInput" placeholder="Search food items"
+                        oninput="searchFoods()">
+                    <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3"></i>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <select class="form-select" id="categoryFilter" onchange="filterByCategory()">
+                    <option value="all">All Categories</option>
+                    <option value="rice">Rice dishes</option>
+                    <option value="noodles">Noodles</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="desserts">Desserts</option>
+                    <option value="beverages">Beverages</option>
+                </select>
+            </div>
+        </div>
+
+        <!--Food Item Grid(Add more based on this format)-->
+        <div class="row g-4" id="foodGrid">
+            <!--Nasi Lemak(Rice)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="rice" data-name="nasi lemak">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/nasi_lemak_foodlist.jpg" class="card-img-top" alt="Nasi Lemak"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://d3h1lg3ksw6i6b.cloudfront.net/media/image/2024/09/02/be1caaf996bc4d019d43f0beac1d22ce_Nasi_Lemak_Header.jpg" target="_blank">Peter Yeoh</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Nasi Lemak
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Nasi Lemak')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Fragrant coconut rice served with sambal,anchovies,peanuts and hard-boiled egg.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM3.50 - RM8.00
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Nationwide
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </span>
+                            <small class="text-muted">
+                                (4.8 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Char Kuey Teow(Noodle)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="noodles" data-name="char kuey teow">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/char_kuey_teow_foodlist.jpg" class="card-img-top" alt="Char Kuey Teow"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://sweecooks.com/wp-content/uploads/2021/04/Penang-char-kuey-teow-scaled.jpg" target="_blank">Swee San</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Char Kuey Teow
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Char Kuey Teow')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Stir-fried flat rice noodles with prawns, eggs, bean sprouts and Chinese sausages.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM5.00 - RM10.00
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Penang, Kuala Lumpur
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9734;
+                            </span>
+                            <small class="text-muted">
+                                (4.5 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Satay(Snacks)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="snacks" data-name="satay">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/satay_foodlist.jpg" class="card-img-top" alt="Satay"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://satayyakitory.my/__static/51c01d72860f41cda00ee0b506b3ab20/gambar-satay-1.jpg" target="_blank">Satay Yakitory</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Satay
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Satay')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Grilled meat skewers served with peanut sauce, sliced cucumbers, onions and nasi impit.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM0.80 - RM1.50 per stick
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Nationwide
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </span>
+                            <small class="text-muted">
+                                (4.6 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Rendang(Rice)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="rice" data-name="rendang">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/rendang_foodlist.jpg" class="card-img-top" alt="Rendang"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://theyummydelights.com/wp-content/uploads/2024/09/chicken-rendang.jpg" target="_blank">Preeti</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Rendang
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Rendang')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Slow-cooked spicy meat dished cooked in coconut milk and spice paste.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM6.00 - RM15.00
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Nationwide
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </span>
+                            <small class="text-muted">
+                                (4.9 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Cendol(Desserts)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="desserts" data-name="cendol">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/cendol_foodlist.jpg" class="card-img-top" alt="Cendol"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://www.saveur.com/uploads/2019/04/01/7SD4OZMRAULKZD6Q7HO6XSBJVY.jpg?format=webp&optimize=high&precrop=1%3A1%2Csmart" target="_blank">Saveur</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Cendol
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Cendol')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Traditional shaved ice dessert with green pandan rice flour jely, coconut milk, palm sugar
+                            syrup, red bean and white sugar.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM3.00 - RM6.00
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Melaka, Penang
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9734;
+                            </span>
+                            <small class="text-muted">
+                                (4.3 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Teh Tarik(Beverage)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="beverages" data-name="Teh Tarik">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/teh_tarik_foodlist.jpg" class="card-img-top" alt="Teh Tarik"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://www.foodandwine.com/thmb/nVwpNogp5jIibC0fFiLu-ODQc94=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Malaysian-Milk-Tea-teh-tarik-Explainer-FT-BLOG0425-01-9e6b3485899c4477b5e61253d997e1c8.jpg" target="_blank">ThamKC / Getty Images</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Teh Tarik
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Teh Tarik')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Pulled strong black tea mixed with sweetened condensed milk, creating a frothy, creamy and
+                            smooth texture.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM2.00 - RM4.50
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Nationwide
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9734;
+                            </span>
+                            <small class="text-muted">
+                                (4.4 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Roti Canai(Snacks)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="snacks" data-name="roti canai">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/roti_canai_foodlist.jpg" class="card-img-top" alt="Roti Canai"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://media.freemalaysiatoday.com/wp-content/uploads/2025/04/78a445c8-roti-canai-file-pic-290425-resize.webp" target="_blank">Nantha Kumar</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Roti Canai
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Roti Canai')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Flaky flatbread served with various types of curry or other dipping sauces.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM1.00 - RM2.00
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Nationwide
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </span>
+                            <small class="text-muted">
+                                (4.6 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Laksa(Noodle)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="noodles" data-name="Laksa">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/laksa_foodlist.jpg" class="card-img-top" alt="Laksa"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjqzLBS5HEByfegyisQ_rabXCr17hvRjzEO5sKNt1H1jsO7lTVpI4SkHa9K2b9O96IpLgGddf1KtogDXWh-PX5VrgF_IxhPWMU-fw7YRAZENWxp0jtGp0FFITi46WF6OPSDgNZS69_ta1yuPAYUqILApftr7QluR7shSlhi_5ZEQJuSTwFNz44cL-6R1v0/s16000/IMG_0991.HEIC" target="_blank">The World of Street Food</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Laksa
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Laksa')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Spicy noodle soup dishes with rich coconut curry or tangy tamarind broth containing
+                            chicken, prawn, fish balls, tofu puffs and fresh herbs.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM6.00 - RM12.00
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Penang, Melaka, Kuala Lumpur, Sarawak
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9734;
+                            </span>
+                            <small class="text-muted">
+                                (4.5 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Bean Sprout Chicken(Noodle)-->
+            <div class="col-lg-4 col-md-6 food-item fade-in" data-category="rice" data-name="Bean Sprout Chicken">
+                <div class="card h-100 shadow-sm hover-card">
+                    <img src="Images/bean_sprout_chicken_foodlist.jpg" class="card-img-top" alt="Bean Sprout Chicken"
+                        style="height:300px; object-fit:cover;">
+
+                    <div class="image-citation">
+                        Photo by: <a href="https://danielfooddiary.com/wp-content/uploads/2013/03/ipohlaoyau1.jpg" target="_blank">admin</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title">
+                                Bean Sprout Chicken
+                            </h5>
+                            <button class="btn btn-sm btn-outline-danger favorite-btn"
+                                onclick="toggleFavorite(this,'Bean Sprout Chicken')">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                        </div>
+                        <p class="card-text">
+                            Tender, silky poached chicken served with crisp, plump bean sprouts drizzled with a savory mixture of soy sauce and sesame oil.
+                        </p>
+                        <div class="food-details mb-2">
+                            <div class="d-flex justify-content between align-items-center">
+                                <span class="price badge bg-success">
+                                    RM4.00 - RM18.00
+                                </span>
+                                <span class="location text-muted">
+                                    <i class="bi bi-geo-alt">
+                                        Perak
+                                    </i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class="stars text-warning">
+                                &#9733;&#9733;&#9733;&#9733;&#9734;
+                            </span>
+                            <small class="text-muted">
+                                (4.5 / 5.0)
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--My Favorites Section: Show added favorite-->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="mb-4">
+                        My Favorites
+                        <span class="badge bg-primary" id="favoriteCount">
+                            0
+                        </span>
+                    </h3>
+                    <div id="favoritesList" class="alert alert-info">
+                        <i class="bi bi-heart text-danger"></i>
+                        No Favorites items are added yet. Click on the heart icon on food items to add items to your
+                        favorite list.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!--Boostrap JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Custom JavaScript-->
+    <script src="main.js"></script>
+    <script src="foodlist.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="mb-3">Malaysia Gourmet</h5>
+                    <p class="mb-3">Discover the authentic flavors of Malaysian cuisine through our carefully curated gallery and content.</p>
+                    <p class="small text-muted mb-0">Made with ❤️ in Malaysia</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- More Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Explore</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="foodlist.html" class="text-light text-decoration-none">Food List</a></li>
+                        <li><a href="reviews.html" class="text-light text-decoration-none">Reviews</a></li>
+                        <li><a href="explore.html" class="text-light text-decoration-none">Explore</a></li>
+                        <li><a href="login.html" class="text-light text-decoration-none">Login</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media & Contact -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h6 class="mb-3">Connect With Us</h6>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="https://facebook.com/malaysiagourmet" target="_blank" class="text-light">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                        <a href="https://instagram.com/malaysiagourmet" target="_blank" class="text-light">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                        <a href="https://twitter.com/malaysiagourmet" target="_blank" class="text-light">
+                            <i class="bi bi-twitter fs-5"></i>
+                        </a>
+                        <a href="https://youtube.com/malaysiagourmet" target="_blank" class="text-light">
+                            <i class="bi bi-youtube fs-5"></i>
+                        </a>
+                    </div>
+                    <p class="small text-muted mb-2">📧 info@malaysiagourmet.com</p>
+                    <p class="small text-muted mb-0">📞 +60 3-1234 5678</p>
+                </div>
+            </div>
+            <!-- Copyright and Legal Notice -->
+            <hr class="my-4 border-secondary">
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="small text-muted mb-2">
+                        <strong>Image Copyright Notice:</strong> All images displayed on this website are subject to their respective copyright holders. 
+                        <br>Images are used for educational and demonstration purposes only.
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <p class="small text-muted mb-0">Made with ❤️ in Malaysia</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

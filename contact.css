@@ -1,0 +1,171 @@
+/* Contact page specific styles */
+
+/* Page title and subtitle - independent from gallery */
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.contact-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+/* Form styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Social media buttons */
+.social-buttons {
+    gap: 1rem !important;
+}
+
+.social-buttons .btn {
+    min-width: 140px;
+    transition: all 0.3s ease;
+}
+
+.social-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Contact info cards */
+.contact-card {
+    transition: all 0.3s ease;
+    padding: 2rem 1rem;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.contact-card i {
+    margin-bottom: 1rem;
+}
+
+/* Map section styling */
+.ratio iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem !important;
+    }
+    
+    .contact-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+        margin: 1rem;
+        max-width: 100%;
+    }
+    
+    .social-buttons {
+        gap: 0.5rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .social-buttons .btn {
+        min-width: 250px;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .contact-card {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-card i {
+        font-size: 2.5rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Ensure container has proper padding on mobile */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-title {
+        font-size: 1.75rem !important;
+    }
+    
+    .contact-subtitle {
+        font-size: 0.9rem !important;
+    }
+    
+    .contact-form {
+        padding: 1rem;
+        margin: 0.5rem;
+        max-width: calc(100vw - 1rem);
+    }
+    
+    .social-buttons .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+        min-width: 280px;
+        width: 100%;
+    }
+    
+    .contact-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-card i {
+        font-size: 2rem !important;
+    }
+    
+    .contact-card h5 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-card p {
+        font-size: 0.9rem;
+    }
+    
+    /* Ensure no horizontal overflow */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Fix social buttons container */
+    .social-buttons {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}

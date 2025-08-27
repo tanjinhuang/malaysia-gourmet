@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Street Food Explorer - Sign Up</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="signup.css">
+
+  <style>
+    /* Popup Notifications at the Top */
+    #successPopup,
+    #errorPopup {
+        position: fixed;
+        top: -60px; /* hidden above screen initially */
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        max-width: 400px; /* shorter width */
+        font-size: 0.9rem; /* smaller text */
+        padding: 6px 12px; /* less padding */
+        border-radius: 6px; /* softer look */
+        z-index: 1050;
+        transition: top 0.5s ease-in-out;
+    }
+
+    #successPopup.show,
+    #errorPopup.show {
+        top: 15px; /* slide down into view */
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Success popup -->
+  <div id="successPopup">Account created successfully! 🎉</div>
+
+  <div class="signup-card">
+    <h1>Create Account</h1>
+    <p>Sign up to start exploring your favorite street foods 🍜🍢🌮</p>
+
+    <form id="signupForm">
+      <!-- Username -->
+      <label for="newUsername">Username:</label>
+      <input type="text" id="newUsername" required>
+
+      <!-- Password -->
+      <label for="newPassword">Password:</label>
+      <input type="password" id="newPassword" required>
+
+      <!-- Password requirements -->
+      <ul id="passwordRules">
+        <li id="ruleLength">* At least 6 characters</li>
+        <li id="ruleUpper">* At least one uppercase letter (A–Z)</li>
+        <li id="ruleNumber">* At least one number (0–9)</li>
+      </ul>
+
+      <!-- Submit button -->
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <!-- JS -->
+  <script src="signup.js"></script>
+</body>
+
+</html>

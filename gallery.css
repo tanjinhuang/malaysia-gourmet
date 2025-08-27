@@ -1,0 +1,137 @@
+/* Gallery-specific CSS styles */
+
+/* Gallery page title styling */
+.gallery-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.gallery-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+/* Filter buttons styling */
+.filter-buttons {
+    margin-bottom: 2rem;
+}
+
+.filter-buttons .btn {
+    margin: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.filter-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.filter-buttons .btn.active {
+    background-color: #667eea !important;
+    border-color: #667eea !important;
+    color: white !important;
+}
+
+/* Gallery grid styling */
+.gallery-grid {
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    transition: all 0.3s ease;
+}
+
+.gallery-item .card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.gallery-item .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-item .card-img-top {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item .card-img-top:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item .card-body {
+    padding: 1.5rem;
+}
+
+.gallery-item .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.gallery-item .card-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Animation for filtered items */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal styling enhancements */
+.modal-content {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-body img {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments for gallery */
+@media (max-width: 768px) {
+    .gallery-title {
+        font-size: 2rem;
+    }
+    
+    .gallery-subtitle {
+        font-size: 1rem;
+    }
+    
+    .filter-buttons .btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .gallery-item .card-body {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,266 @@
+/* Main CSS - Common styles for all pages */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background-color: #2c3e50;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 2000 !important;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    border-bottom: 1px solid #34495e;
+}
+
+.mobile-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.mobile-menu ul li a:hover {
+    background-color: #34495e;
+}
+
+.mobile-menu ul li a.active {
+    background-color: #3498db;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+    color: #ecf0f1;
+    transform: translateY(-2px);
+}
+
+nav ul li a.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 75px;
+    height: 75px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.back-to-top:active {
+    transform: translateY(-1px);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    border-top: 3px solid #3498db;
+}
+
+footer h5, footer h6 {
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+footer p, footer .text-muted {
+    color: #ecf0f1 !important;
+}
+
+footer a:hover {
+    color: #3498db !important;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a {
+    transition: transform 0.3s ease;
+}
+
+footer .social-links a:hover {
+    transform: translateY(-2px);
+    color: #3498db !important;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+footer .list-unstyled a {
+    font-size: 0.9rem;
+    color: #ecf0f1 !important;
+}
+
+footer .list-unstyled a:hover {
+    color: #3498db !important;
+}
+
+footer hr {
+    opacity: 0.3;
+}
+
+footer, footer .container, footer .row, footer .col-lg-4, footer .col-md-6, footer .col-md-8, footer .col-md-4 {
+    text-align: left !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 1000px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1001px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* Tablet adjustments for medium screens */
+@media (max-width: 1000px) and (min-width: 769px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+    
+    nav ul {
+        gap: 1rem;
+    }
+    
+    nav ul li a {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}

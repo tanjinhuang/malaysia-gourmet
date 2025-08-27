@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* same style */
+  background: url('images/login.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Style */
+.signup-card {
+  max-width: 450px;
+  width: 90%;
+  margin: 80px auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Signup Title */
+.signup-card h1 {
+  font-size: 2.5rem;   /* bigger */
+  font-weight: normal; /* not bold */
+  color: #4c68e6;      /* pick same main theme color */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+/* Description */
+.signup-card p {
+  font-size: 0.9rem;   /* smaller */
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Labels */
+.signup-card label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Input Fields */
+.signup-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Glow effect when focused */
+.signup-card input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.6);
+}
+
+
+/* Password rules */
+#passwordRules {
+  text-align: left;
+  margin: 0 0 1rem;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Button */
+.signup-card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-card button:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+/* Success popup */
+#successPopup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 20px;
+  }
+}
+
+/* Password rules */
+#passwordRules {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 15px 0;
+  font-size: 13px;
+  text-align: left;
+}
+
+#passwordRules li {
+  color: #dc3545;
+  margin: 3px 0;
+}
+
+#passwordRules li.valid {
+  color: #28a745;
+  font-weight: bold;
+}

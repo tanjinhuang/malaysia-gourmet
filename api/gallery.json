@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Nasi Lemak",
+    "description": "Traditional Malaysian fragrant rice dish with coconut milk.",
+    "img": "Images/nasi-lemak.jpg",
+    "source": "Source: steves-kitchen.com",
+    "category": "food"
+  },
+  {
+    "id": 2,
+    "name": "Teh Tarik",
+    "description": "Famous Malaysian pulled tea with condensed milk.",
+    "img": "Images/teh-tarik.jpg",
+    "source": "Source: tehtarikplace.my",
+    "category": "beverages"
+  },
+  {
+    "id": 3,
+    "name": "Char Kuey Teow",
+    "description": "Stir-fried rice noodles with prawns, eggs, and bean sprouts.",
+    "img": "Images/char-kuey-teow.jpg",
+    "source": "Source: Rasa Malaysia",
+    "category": "food"
+  },
+  {
+    "id": 4,
+    "name": "Cendol",
+    "description": "Refreshing iced sweet dessert drink with coconut milk.",
+    "img": "Images/cendol.jpg",
+    "source": "Source: Beyond Sustenance",
+    "category": "beverages"
+  },
+  {
+    "id": 5,
+    "name": "Rendang",
+    "description": "Spicy meat dish cooked in coconut milk and spices.",
+    "img": "Images/rendang.jpg",
+    "source": "Source: fity.club",
+    "category": "food"
+  },
+  {
+    "id": 6,
+    "name": "Kopi O",
+    "description": "Traditional Malaysian black coffee brewed with sugar.",
+    "img": "Images/kopi-o.jpg",
+    "source": "Source: munchmalaysia.com",
+    "category": "beverages"
+  },
+  {
+    "id": 7,
+    "name": "Satay",
+    "description": "Grilled skewered meat served with peanut sauce.",
+    "img": "Images/satay.jpg",
+    "source": "Source: latashaskitchen.com",
+    "category": "food"
+  },
+  {
+    "id": 8,
+    "name": "Sirap Bandung",
+    "description": "Pink syrup drink mixed with condensed milk.",
+    "img": "Images/sirap-bandung.webp",
+    "source": "Source: latashaskitchen.com",
+    "category": "beverages"
+  }
+]
