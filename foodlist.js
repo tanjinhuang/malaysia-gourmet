@@ -82,7 +82,7 @@ function filterByCategory() {
     }
 }
 
-// Toggle favorite functionality
+// Toggle favorite function
 function toggleFavorite(button, foodName) {
     const index = favorites.indexOf(foodName);
     
@@ -98,7 +98,7 @@ function toggleFavorite(button, foodName) {
         button.innerHTML = '<i class="bi bi-heart-fill"></i>';
     }
     
-    // Save to localStorage
+    // Save to local storage
     saveFavorites();
     updateFavoritesDisplay();
     
@@ -109,7 +109,7 @@ function toggleFavorite(button, foodName) {
     }, 200);
 }
 
-// Save favorites to localStorage
+// Save favorites to local storage
 function saveFavorites() {
     try {
         localStorage.setItem('malaysiagourmet_favorites', JSON.stringify(favorites));
@@ -118,7 +118,7 @@ function saveFavorites() {
     }
 }
 
-// Load favorites from localStorage
+// Load favorites from local storage
 function loadFavorites() {
     try {
         const savedFavorites = localStorage.getItem('malaysiagourmet_favorites');
@@ -166,7 +166,3 @@ function updateFavoritesDisplay() {
         }
     }
 }
-
-
-
-
